@@ -1,5 +1,5 @@
 {
-  "name": "modava/modava-assets",
+  "name": "modava/assets",
   "description": "Modava assets",
   "keywords": [
     "yii2",
@@ -9,7 +9,7 @@
   "license": "BSD-3-Clause",
   "support": {
     "wiki": "http://www.yiiframework.com/wiki/",
-    "source": "https://github.com/modava/modava-assets"
+    "source": "https://github.com/modava/assets"
   },
   "authors": [
     {
@@ -26,7 +26,7 @@
   },
   "autoload": {
     "psr-4": {
-      "modava\\": ""
+      "modava-assets\\": ""
     }
   },
   "minimum-stability": "dev"

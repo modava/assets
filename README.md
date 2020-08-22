@@ -1,1 +1,1 @@
-Affiliate Modava
+Assets Modava
