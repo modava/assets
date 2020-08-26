@@ -2909,7 +2909,7 @@ ul.list-icon {
 			left:-2px;
 			bottom:-2px;
 			width:40px;
-			display: -webkit-inline-box;
+			//display: -webkit-inline-box;
 			display: -ms-inline-flexbox;
 			display: inline-flex;
 			-webkit-box-align: center;
@@ -3922,7 +3922,7 @@ ul.list-icon {
 	@include bg-linear-gradient(45deg,$neon,$sky);
 	&:hover,&:focus {
 		color:$white;
-		@include bg-linear-gradient(45deg,$neon_dark_1,$sky_dark_1,);
+		@include bg-linear-gradient(45deg,$neon_dark_1,$sky_dark_1);
 	}
 	&:not(:disabled):not(.disabled).active,
 	&:not(:disabled):not(.disabled):active {
@@ -3940,7 +3940,7 @@ ul.list-icon {
 	@include bg-linear-gradient(45deg,$lime,$orange);
 	&:hover,&:focus {
 		color:$white;
-		@include bg-linear-gradient(45deg,$lime_dark_1,$orange_dark_1,);
+		@include bg-linear-gradient(45deg,$lime_dark_1,$orange_dark_1);
 	}
 	&:not(:disabled):not(.disabled).active,
 	&:not(:disabled):not(.disabled):active {
@@ -3958,7 +3958,7 @@ ul.list-icon {
 	@include bg-linear-gradient(45deg,$sun,$grey);
 	&:hover,&:focus {
 		color:$white;
-		@include bg-linear-gradient(45deg,$sun_dark_1,$grey_dark_1,);
+		@include bg-linear-gradient(45deg,$sun_dark_1,$grey_dark_1);
 	}
 	&:not(:disabled):not(.disabled).active,
 	&:not(:disabled):not(.disabled):active {
@@ -3976,7 +3976,7 @@ ul.list-icon {
 	@include bg-linear-gradient(45deg,$orange,$violet);
 	&:hover,&:focus {
 		color:$white;
-		@include bg-linear-gradient(45deg,$orange_dark_1,$violet_dark_1,);
+		@include bg-linear-gradient(45deg,$orange_dark_1,$violet_dark_1);
 	}
 	&:not(:disabled):not(.disabled).active,
 	&:not(:disabled):not(.disabled):active {
@@ -3994,7 +3994,7 @@ ul.list-icon {
 	@include bg-linear-gradient(45deg,$pumpkin,$brown);
 	&:hover,&:focus {
 		color:$white;
-		@include bg-linear-gradient(45deg,$pumpkin_dark_1,$brown_dark_1,);
+		@include bg-linear-gradient(45deg,$pumpkin_dark_1,$brown_dark_1);
 	}
 	&:not(:disabled):not(.disabled).active,
 	&:not(:disabled):not(.disabled):active {
@@ -4012,7 +4012,7 @@ ul.list-icon {
 	@include bg-linear-gradient(45deg,$brown,$teal);
 	&:hover,&:focus {
 		color:$white;
-		@include bg-linear-gradient(45deg,$brown_dark_1,$teal_dark_1,);
+		@include bg-linear-gradient(45deg,$brown_dark_1,$teal_dark_1);
 	}
 	&:not(:disabled):not(.disabled).active,
 	&:not(:disabled):not(.disabled):active {
@@ -4030,7 +4030,7 @@ ul.list-icon {
 	@include bg-linear-gradient(45deg,$smoke,$dark);
 	&:hover,&:focus {
 		color:$white;
-		@include bg-linear-gradient(45deg,$smoke_dark_1,$dark_20,);
+		@include bg-linear-gradient(45deg,$smoke_dark_1,$dark_20);
 	}
 	&:not(:disabled):not(.disabled).active,
 	&:not(:disabled):not(.disabled):active {
@@ -4048,7 +4048,7 @@ ul.list-icon {
 	@include bg-linear-gradient(45deg,$gold,$grey);
 	&:hover,&:focus {
 		color:$white;
-		@include bg-linear-gradient(45deg,$gold_dark_1,$grey_dark_1,);
+		@include bg-linear-gradient(45deg,$gold_dark_1,$grey_dark_1);
 	}
 	&:not(:disabled):not(.disabled).active,
 	&:not(:disabled):not(.disabled):active {
@@ -4066,7 +4066,7 @@ ul.list-icon {
 	@include bg-linear-gradient(45deg,$teal,$pumpkin);
 	&:hover,&:focus {
 		color:$white;
-		@include bg-linear-gradient(45deg,$teal_dark_1,$pumpkin_dark_1,);
+		@include bg-linear-gradient(45deg,$teal_dark_1,$pumpkin_dark_1);
 	}
 	&:not(:disabled):not(.disabled).active,
 	&:not(:disabled):not(.disabled):active {
@@ -4818,7 +4818,7 @@ button.close {
 		align-items: center;
 		justify-content: space-between;
 		-webkit-justify-content: space-between;
-		-ms-flex-pack: space-between;
+		//-ms-flex-pack: space-between;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		margin-bottom:25px;
@@ -4917,7 +4917,7 @@ button.close {
 			align-items: center;
 			justify-content: space-between;
 			-webkit-justify-content: space-between;
-			-ms-flex-pack: space-between;
+			//-ms-flex-pack: space-between;
 		}
 	}
 	.card-action-wrap {
@@ -9438,7 +9438,7 @@ table.dataTable {
 			display: flex;
 			justify-content: flex-end;
 			-webkit-justify-content: flex-end;
-			-ms-flex-pack: flex-end;
+			//-ms-flex-pack: flex-end;
 			-webkit-box-align: center;
 			-ms-flex-align: center;
 			align-items: center;
@@ -10205,7 +10205,7 @@ table.dataTable {
 	}
 }
 .avatar-group {
-	display: -webkit-inline-box;
+	//display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	.avatar { 
@@ -11027,7 +11027,7 @@ table.dataTable {
 			align-items: center;
 			justify-content: space-between;
 			-webkit-justify-content: space-between;
-			-ms-flex-pack: space-between;
+			//-ms-flex-pack: space-between;
 			height:72px;
 			padding: 0 15px;
 			background:$white;
@@ -11113,7 +11113,7 @@ table.dataTable {
 					display: flex;
 					justify-content: space-between;
 					-webkit-justify-content: space-between;
-					-ms-flex-pack: space-between;
+					//-ms-flex-pack: space-between;
 					>div:First-child {
 						.user-name,
 						.user-last-chat {
@@ -11175,7 +11175,7 @@ table.dataTable {
 			align-items: center;
 			justify-content: space-between;
 			-webkit-justify-content: space-between;
-			-ms-flex-pack: space-between;
+			//-ms-flex-pack: space-between;
 			height:72px;
 			padding: 0 15px;
 			background:$white;
@@ -11336,12 +11336,12 @@ table.dataTable {
 						display: flex;
 						justify-content: flex-end;
 						-webkit-justify-content: flex-end;
-						-ms-flex-pack: flex-end;
+						//-ms-flex-pack: flex-end;
 						-ms-flex-direction: column;
 						flex-direction: column;
-						-webkit-box-align: flex-end;
-						-ms-flex-align: flex-end;
-						align-items: flex-end;						
+						//-webkit-box-align: flex-end;
+						//-ms-flex-align: flex-end;
+						align-items: flex-end;
 						.msg-box {
 							>div {
 								background:$green;
@@ -11502,7 +11502,7 @@ table.dataTable {
 		top:0;
 		header {
 			justify-content: start;
-			-webkit-justify-content: start;
+			//-webkit-justify-content: start;
 			-ms-flex-pack: start;
 			.back-user-list {
 				display:block;
@@ -11675,7 +11675,7 @@ table.dataTable {
 				align-items: center;
 				justify-content: space-between;
 				-webkit-justify-content: space-between;
-				-ms-flex-pack: space-between;
+				//-ms-flex-pack: space-between;
 				height:72px;
 				padding: 0 15px;
 				background:$white;
@@ -11753,7 +11753,7 @@ table.dataTable {
 						display: flex;
 						justify-content: space-between;
 						-webkit-justify-content: space-between;
-						-ms-flex-pack: space-between;
+						//-ms-flex-pack: space-between;
 						>div:First-child {
 							.email-head,
 							.email-subject,
@@ -11806,7 +11806,7 @@ table.dataTable {
 								display: flex;
 								justify-content: flex-end;
 								-webkit-justify-content: flex-end;
-								-ms-flex-pack: flex-end;
+								//-ms-flex-pack: flex-end;
 								margin-top:30px;
 							}
 						}
@@ -11852,7 +11852,7 @@ table.dataTable {
 				align-items: center;
 				justify-content: space-between;
 				-webkit-justify-content: space-between;
-				-ms-flex-pack: space-between;
+				//-ms-flex-pack: space-between;
 				height:72px;
 				padding: 0 15px;
 				background:$white;
@@ -11881,7 +11881,7 @@ table.dataTable {
 					display: flex;
 					justify-content: space-between;
 					-webkit-justify-content: space-between;
-					-ms-flex-pack: space-between;
+					//-ms-flex-pack: space-between;
 					h4,>div {
 						margin-bottom:10px;
 					}
@@ -11897,7 +11897,7 @@ table.dataTable {
 					display: flex;
 					justify-content: space-between;
 					-webkit-justify-content: space-between;
-					-ms-flex-pack: space-between;
+					//-ms-flex-pack: space-between;
 					.sender-email {
 						font-size:14px;
 					}
@@ -12031,7 +12031,7 @@ table.dataTable {
 			top:0;
 			header {
 				justify-content: start;
-				-webkit-justify-content: start;
+				//-webkit-justify-content: start;
 				-ms-flex-pack: start;
 				.back-email-list {
 					display:block;
@@ -12199,7 +12199,7 @@ table.dataTable {
 				align-items: center;
 				justify-content: space-between;
 				-webkit-justify-content: space-between;
-				-ms-flex-pack: space-between;
+				//-ms-flex-pack: space-between;
 				height:72px;
 				padding: 0 15px;
 				background:$white;
@@ -12267,7 +12267,7 @@ table.dataTable {
 							display: flex;
 							justify-content: flex-end;
 							-webkit-justify-content: flex-end;
-							-ms-flex-pack: flex-end;
+							//-ms-flex-pack: flex-end;
 							>a {
 								margin-right:24px;
 								font-size:20px;
@@ -12414,7 +12414,7 @@ table.dataTable {
 					-ms-flex-pack: center;
 					justify-content: space-between;
 					-webkit-justify-content: space-between;
-					-ms-flex-pack: space-between;
+					//-ms-flex-pack: space-between;
 					margin-bottom: 0;
 					padding: 0 15px;
 					background:$white;
@@ -12997,7 +12997,7 @@ table.dataTable {
 		padding:80px 0;
 	}
 	.hk-preview-sec {
-		background-image:url(../img/landing-pg/herobg.png);
+		//background-image:url(../img/landing-pg/herobg.png);
 		background-size:cover;
 		background-position:center;
 		background-repeat:no-repeat;

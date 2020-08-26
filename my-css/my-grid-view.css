@@ -1,0 +1,275 @@
+.dt-grid {
+    position: relative;
+    zoom:1;border-radius: 4px
+}
+
+.dt-widget,.grid-header,.grid-header-wrap,.grid-header tr>th,.dt-grid td {
+    border-color: #ccc
+}
+
+.dt-grid,.dt-widget {
+    outline: 0;
+    -webkit-tap-highlight-color: transparent
+}
+
+.dt-widget table {
+    width: 100%;
+    margin: 0;
+    max-width: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    empty-cells: show;
+    border-width: 0;
+    outline: 0
+}
+
+.dt-widget td {
+    border-style: solid;
+    border-width: 0 0 0 1px;
+    padding: .4em .6em;
+    line-height: 1.6em;
+    vertical-align: middle;
+    text-overflow: ellipsis
+}
+
+.dt-widget .filters>td {
+    padding-right: 2.8rem;
+    position: relative
+}
+
+.dt-widget tr td {
+    border-width: 1px 0 0 1px;
+    border-style: solid;
+    border-color: #ccc
+}
+
+.dt-widget tbody td:first-child,.grid-header tr th:first-child {
+    border-left-width: 0
+}
+
+.grid-header {
+    background-repeat: repeat;
+    background-image: none;
+    background-position: 50% 50%;
+    padding-right: 12px;
+    border-bottom-style: solid;
+    border-bottom-width: 0;
+    zoom:1}
+
+.dt-widget .btn-group .btn-default {
+    padding: .3rem .5rem
+}
+
+.dt-widget .filters td .btn-default {
+    padding: .6rem .4rem .4rem;
+    position: absolute;
+    right: 5px;
+    top: 8px
+}
+
+.dt-widget .filters td .btn-default i {
+    color: #999;
+    font-size: 14px
+}
+
+.dt-widget .myLoading-container {
+    background-color: rgba(255,255,255,.5)
+}
+
+.dt-widget::-webkit-scrollbar {
+    background: 0 0;
+    width: 12px;
+    height: 12px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: background-color .2s linear,opacity .2s linear
+}
+
+.dt-widget::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.2);
+    height: 12px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px
+}
+
+.dt-grid-content {
+    position: relative;
+    width: 100%;
+    zoom:1;min-height: 0;
+    white-space: normal
+}
+
+.dt-grid-content::-webkit-scrollbar {
+    background: 0 0;
+    width: 12px;
+    height: 12px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: background-color .2s linear,opacity .2s linear
+}
+
+.dt-grid-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.2);
+    height: 12px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px
+}
+
+.pager-wrap {
+    clear: both;
+    position: relative;
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    /*border-top: none;*/
+    line-height: 2em;
+    padding: .4em 0 .1em;
+    /*border-color: #ccc;*/
+    /*background-color: #f5f5f5;*/
+    /*border-radius: 0 0 3px 3px*/
+}
+
+.pager-wrap .summary {
+    padding-top: 4.5px;
+    line-height: 2.3em;
+}
+
+.pager-wrap .pagination,.pager-wrap .summary {
+    margin: 0 .2rem
+}
+
+.pager-wrap .page-item .material-icons {
+    font-size: 14px
+}
+
+.pager-wrap .page-item.prev .material-icons {
+    transform: rotateY(180deg)
+}
+
+.pager-wrap .page-size-widget {
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
+}
+
+.pager-wrap .go-to-page {
+    max-width: 50px;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #4e5154;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+
+.pane-single-table {
+    background: #f5f5f5
+}
+
+.pane-single-table .pane-hScroll {
+    overflow: auto
+}
+
+.pane-single-table .pane-vScroll {
+    background-color: #f5f5f5;
+    overflow-y: scroll;
+    overflow-x: hidden
+}
+
+.pane-single-table table {
+    border-collapse: collapse;
+    background-color: #fff;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%
+}
+
+.pane-single-table table thead {
+    background-color: #f5f5f5
+}
+
+.pane-single-table table th,.pane-single-table table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    width: 150px;
+    text-overflow: ellipsis
+}
+
+.pane-single-table table th {
+    border-top: 0
+}
+
+.pane-single-table table th a {
+    display: block;
+    color: #000;
+    position: relative
+}
+
+.pane-single-table table th,.pane-single-table table th a {
+    font-weight: 400
+}
+
+.pane-single-table table thead th:first-child,.pane-single-table table thead td:first-child {
+    border-left: 0
+}
+
+.pane-single-table table thead th:first-child,.pane-single-table table thead th:last-child {
+    text-align: center
+}
+
+.pane-single-table table th a:before,.pane-single-table table th a:after,.pane-single-table table th a.asc:before,.pane-single-table table th a.asc:after,.pane-single-table table th a.desc:before,.pane-single-table table th a.desc:after {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    opacity: .5
+}
+
+.pane-single-table table th a:before,.pane-single-table table th a.asc:before,.pane-single-table table th a.desc:before {
+    right: 0;
+    content: "\2191"
+}
+
+.pane-single-table table th a:after,.pane-single-table table th a.asc:after,.pane-single-table table th a.desc:after {
+    right: .5em;
+    content: "\2193"
+}
+
+.pane-single-table table th a.asc:before,.pane-single-table table th a.desc:after {
+    opacity: 1
+}
+
+.pane-single-table table tbody tr:hover {
+    background-color: rgba(245,245,245,.7)
+}
+
+.pane-single-table table td {
+    vertical-align: top
+}
+
+.pane-single-table table td:first-child,.pane-single-table table td:last-child {
+    align-content: center;
+    text-align: center
+}
+
+td.text-center .custom-control .custom-control-label::before,td.text-center .custom-control .custom-control-label::after {
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.pane-single-table table td .empty {
+    text-align: left
+}

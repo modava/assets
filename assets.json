@@ -1,0 +1,21 @@
+{
+  "scripts": [
+    {
+      "name": "my-grid-view"
+    },
+    {
+      "name": "my-loading"
+    }
+  ],
+  "styles": [
+    {
+      "name": "my-grid-view"
+    },
+    {
+      "name": "my-loading"
+    },
+    {
+      "name": "custom"
+    }
+  ]
+}
