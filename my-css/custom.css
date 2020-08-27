@@ -75,6 +75,9 @@
 
 .hk-sec-wrapper {
     margin: 0;
+}
+
+.hk-sec-wrapper.index {
     padding: 0;
 }
 
