@@ -5,6 +5,9 @@
     },
     {
       "name": "my-loading"
+    },
+    {
+      "name": "init-chart"
     }
   ],
   "styles": [
