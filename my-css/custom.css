@@ -84,3 +84,30 @@
 .hk-footer-wrap .footer p {
     line-height: 30px;
 }
+
+/* CSS For Mini-List*/
+.mini-list td {
+    white-space: nowrap !important;;
+    overflow: hidden !important;;
+    text-overflow: ellipsis !important;;
+}
+
+.minilist td.w-sm {
+    max-width: 150px !important;
+    min-width: 100px !important;
+}
+
+.minilist td.w-md {
+    max-width: 250px !important;
+    min-width: 200px !important;
+}
+
+.minilist td.w-lg {
+    max-width: 350px !important;
+    min-width: 300px !important;
+}
+
+.minilist td.w-xl {
+    max-width: 450px !important;
+    min-width: 400px !important;
+}

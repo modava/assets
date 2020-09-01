@@ -1,4 +1,4 @@
-function loadPieChart (cardChart) {
+function loadPieChart(cardChart) {
     cardChart.find('.card-body').myLoading();
     var eChartContainer = echarts.init(cardChart.find('.echart')[0]);
     $.get(cardChart.data('chart-url'), function (response) {
@@ -43,6 +43,7 @@ function loadPieChart (cardChart) {
         eChartContainer.resize();
     });
 }
+
 function loadBarChart(cardChart) {
     var eChartContainer = echarts.init(cardChart.find('.echart')[0]);
     cardChart.find('.card-body').myLoading();
@@ -178,6 +179,23 @@ function loadBarChart(cardChart) {
         eChartContainer.resize();
     });
 }
+
+function loadMiniList(card) {
+    card.find('.card-body').myLoading();
+
+    let url = card.data('url-get-data');
+
+    if (!url) {
+        return false;
+    }
+
+    $.get(url, function (response) {
+        card.find('.card-body').myUnloading();
+        card.find('.card-body').find('tbody').html(response);
+        card.find('[data-toggle="popover"]').popover({html: true});
+    });
+}
+
 $(function () {
     $('.card-pie-chart').each(function (index, cardChartEle) {
         var cardChart = $(cardChartEle);
@@ -194,4 +212,13 @@ $(function () {
         });
         loadBarChart(cardChart);
     });
+
+    $('.mini-list').each(function (index, ele) {
+        var miniList = $(ele);
+        miniList.find('.refresh').on('click', function () {
+            loadMiniList(miniList);
+        });
+        loadMiniList(miniList);
+    });
+
 });
