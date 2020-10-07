@@ -1,8 +1,27 @@
 /*::-webkit-scrollbar{background:transparent;width:8px;height:8px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;opacity:0;transition:background-color .2s linear,opacity .2s linear}*/
 /*::-webkit-scrollbar-thumb{background-color:#22af47;height:8px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}*/
+.form-group .form-control {
+    height: calc(1.5em + .75em + 2px) !important;
+    font-size: 14px;
+}
+
+.form-group label {
+    font-size: 13px;
+}
+
+.input-group .btn,
+.input-group-addon .btn {
+    line-height: 1.15;
+}
+
+.popover {
+    max-width: 100%;
+}
+
 .hk-breadcrumb .breadcrumb {
     margin-bottom: 1rem;
 }
+
 .nav.nav-sm .nav-link {
     padding: .25rem 0.75rem .25rem 0rem;
     font-size: 13px;

@@ -256,7 +256,8 @@
 }
 
 .pane-single-table table td {
-    vertical-align: top
+    vertical-align: top;
+    overflow-wrap: break-word;
 }
 
 .pane-single-table table td:first-child,.pane-single-table table td:last-child {
