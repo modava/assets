@@ -1,6 +1,7 @@
 /*::-webkit-scrollbar{background:transparent;width:8px;height:8px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;opacity:0;transition:background-color .2s linear,opacity .2s linear}*/
 /*::-webkit-scrollbar-thumb{background-color:#22af47;height:8px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}*/
-.form-group .form-control {
+.form-group input.form-control,
+.form-group select.form-control:not([multiple]){
     height: calc(1.5em + .75em + 2px) !important;
     font-size: 14px;
 }

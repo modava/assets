@@ -1,18 +1,48 @@
-function myGridView(options) {
+var myGridView = function (options) {
     "use strict";
     var mygridview = new GridView();
     if (typeof options === 'object') mygridview.init(options);
     return mygridview;
 }
 
-var GridView = function () {
-    this.options = {}, this.init = function (options) {
+class GridView {
+    constructor() {
+        this.options = {};
+        this.defaults = {
+            pjaxId: '#dt-pjax',
+            gridViewClass: '.grid-view',
+            dtClass: '.dt-widget',
+            contentClass: '.dt-grid-content',
+            paneScroll: ['.pane-hScroll', '.pane-vScroll'],
+            pageParam: 'page',
+            urlChangePageSize: null,
+        };
+    }
+
+    setCloseButton() {
+        var $this = this;
+        $($this.options.dtClass + " .filters input, " + this.options.dtClass + " .filters select").each(function () {
+            "" != $(this).val() ? $(this).closest("td").append('<button class="btn btn-default btn-close-filter" title="Xóa"><i class="material-icons">clear</i></button>') : $(this).closest("td").find(".btn-close-filter").remove()
+        })
+    }
+
+    init(options) {
         this.options = $.extend(this.defaults, options);
         this.setWidthContent();
         this.setHeightContent();
         this.setWidthCol();
         this.setEvents();
-    }, this.setHeightContent = function () {
+    }
+
+    setWidthColOnResize() {
+        var i = 0;
+        $(this.options.dtClass).find("table thead tr").eq(0).children("th").each(function () {
+            var t = $(this).attr("width") > $(this).outerWidth() ? $(this).attr("width") : $(this).outerWidth();
+            0 == i ? $("colgroup col:first-child").css("width", $(this).attr("width")) : $("colgroup col:nth-child(" + (i + 1) + ")").css("width", t), i++
+        });
+    }
+
+    setHeightContent() {
         var content = $(this.options.contentClass) || null;
         if (content != null) {
             var minus = content.attr('data-minus') || null, data = minus != null ? JSON.parse(minus) : {},
@@ -34,23 +64,30 @@ var GridView = function () {
             hContent -= breadcrumb;
             content.height(hContent);
         }
-    }, this.setWidthContent = function () {
-        var contentWidth = $(this.options.gridViewClass).outerWidth();
-        $(this.options.paneScroll).css('width', contentWidth);
-    }, this.setWidthCol = function () {
+    }
+
+    setWidthCol() {
         var i = 0, e = $(this.options.dtClass).find("table thead tr").eq(0).children("th"), l = e.length,
             s = $(window).width();
         e.each(function () {
             var t = null != $(this).attr("width") ? $(this).attr("width") : $(this).outerWidth();
             0 == i ? $("colgroup col:first-child").css("width", $(this).attr("width")) : $("colgroup col:nth-child(" + (i + 1) + ")").css("width", t), i++
         });
-    }, this.setWidthColOnResize = function () {
-        var i = 0;
-        $(this.options.dtClass).find("table thead tr").eq(0).children("th").each(function () {
-            var t = $(this).attr("width") > $(this).outerWidth() ? $(this).attr("width") : $(this).outerWidth();
-            0 == i ? $("colgroup col:first-child").css("width", $(this).attr("width")) : $("colgroup col:nth-child(" + (i + 1) + ")").css("width", t), i++
-        });
-    }, this.setEvents = function () {
+    }
+
+    setEventScroll() {
+        var $this = this;
+        jQuery('body').find($this.options.paneScroll[0]).unbind('scroll').bind('scroll', function () {
+            $($this.options.paneScroll[1]).width($($this.options.paneScroll[0]).width() + $($this.options.paneScroll[0]).scrollLeft());
+        })
+    }
+
+    setWidthContent() {
+        var contentWidth = $(this.options.gridViewClass).outerWidth();
+        $(this.options.paneScroll).css('width', contentWidth);
+    }
+
+    setEvents() {
         var $this = this;
         $(document).on('pjax:send', function () {
             $($this.options.dtClass).find('tbody').myLoading({fixed: true,});
@@ -92,24 +129,5 @@ var GridView = function () {
                 $.pjax.reload({url: currentUrl, method: 'POST', container: $this.options.pjaxId});
             });
         });
-    }, this.setEventScroll = function () {
-        var $this = this;
-        jQuery('body').find($this.options.paneScroll[0]).unbind('scroll').bind('scroll', function () {
-            $($this.options.paneScroll[1]).width($($this.options.paneScroll[0]).width() + $($this.options.paneScroll[0]).scrollLeft());
-        })
-    }, this.setCloseButton = function () {
-        var $this = this;
-        $($this.options.dtClass + " .filters input, " + this.options.dtClass + " .filters select").each(function () {
-            "" != $(this).val() ? $(this).closest("td").append('<button class="btn btn-default btn-close-filter" title="Xóa"><i class="material-icons">clear</i></button>') : $(this).closest("td").find(".btn-close-filter").remove()
-        })
-    };
-    this.defaults = {
-        pjaxId: '#dt-pjax',
-        gridViewClass: '.grid-view',
-        dtClass: '.dt-widget',
-        contentClass: '.dt-grid-content',
-        paneScroll: ['.pane-hScroll', '.pane-vScroll'],
-        pageParam: 'page',
-        urlChangePageSize: null,
-    };
-};
+    }
+}
